@@ -6,7 +6,7 @@ git branch -M main
 git remote add origin https://github.com/Apolo1Arthur/Trabalho.toji.git
  git push -u origin main
 
-       <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -68,15 +68,15 @@ git remote add origin https://github.com/Apolo1Arthur/Trabalho.toji.git
 
   <h1>Oprah Winfrey: Superação e Sucesso</h1>
 
-  <button onclick="showContent('intro', 'gifs/st1.gif', 'musica1.mp3')">Introdução</button>
-  <button onclick="showContent('infancia', 'gifs/st2.gif', 'musica2.mp3')">Infância e Dificuldades</button>
-  <button onclick="showContent('carreira', 'gifs/st3.gif', 'musica3.mp3')">Início da Carreira</button>
-  <button onclick="showContent('conquistas', 'gifs/st4.gif', 'musica4.mp3')">Empreendedorismo e Conquistas</button>
-  <button onclick="showContent('licoes', 'gifs/st5.gif', 'musica5.mp3')">Lições para Administração</button>
-  <button onclick="showContent('conclusao', 'gifs/st6.jpg', 'musica6.mp3')">Conclusão</button>
+  <button onclick="showContent('intro', 'st1.gif', 'musica1.mp3')">Introdução</button>
+  <button onclick="showContent('infancia', 'st2.gif', 'musica2.mp3')">Infância e Dificuldades</button>
+  <button onclick="showContent('carreira', 'st3.gif', 'musica3.mp3')">Início da Carreira</button>
+  <button onclick="showContent('conquistas', 'st4.gif', 'musica4.mp3')">Empreendedorismo e Conquistas</button>
+  <button onclick="showContent('licoes', 'st5.gif', 'musica5.mp3')">Lições para Administração</button>
+  <button onclick="showContent('conclusao', 'st6.jpg', 'musica6.mp3')">Conclusão</button>
 
   <div id="gif-container">
-    <img id="gif" src="gifs/st1.gif" alt="GIF" />
+    <img id="gif" src="st1.gif" alt="GIF" />
   </div>
 
   <div id="intro" class="content">
@@ -135,12 +135,17 @@ git remote add origin https://github.com/Apolo1Arthur/Trabalho.toji.git
 
   <script>
     function showContent(id, gifPath, musicPath) {
+      // Esconder todas as seções
       const sections = document.querySelectorAll('.content');
       sections.forEach(section => section.style.display = 'none');
 
+      // Mostrar a escolhida
       document.getElementById(id).style.display = 'block';
+
+      // Atualizar GIF
       document.getElementById('gif').src = gifPath;
 
+      // Tocar música
       const audio = document.getElementById('audio');
       audio.src = musicPath;
       audio.play();
