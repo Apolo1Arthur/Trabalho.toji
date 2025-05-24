@@ -6,7 +6,7 @@ git branch -M main
 git remote add origin https://github.com/Apolo1Arthur/Trabalho.toji.git
  git push -u origin main
 
- <!DOCTYPE html>
+       <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
